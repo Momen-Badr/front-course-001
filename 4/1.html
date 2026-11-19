@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 1s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .side_navbar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 15px;
+            border: solid #999 1px;
+            position: fixed;
+            background-color: #fff;
+            height: 100vh;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 5px 3px 5px #2233ee33;
+        }
+
+        .side_navbar span {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: red;
+            font-weight: 900;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .preview {
+            padding: 15px;
+            border: solid 1px gray;
+            background: #ddd;
+        }
+    </style>
+
+    <button onclick="side_navbar.style.left=`0%`;">Menu</button>
+
+    <nav class="side_navbar" id="side_navbar">
+        <span onclick="side_navbar.style.left=`-100%`">&times;</span>
+
+        <div>
+
+        </div>
+
+        <div class="preview" id="preview">Lorem ipsum dolor sit amet.</div>
+
+        <div class="rows">
+
+            <div class="row">
+                <div class="title">Change Color</div>
+                <div class="btns">
+                    <button onclick="preview.style.color=`red`;">Red</button>
+                    <button onclick="preview.style.color=`green`;">Green</button>
+                    <button onclick="preview.style.color=`blue`;">Blue</button>
+                    <button onclick="preview.style.color=`cyan`;">Cyan</button>
+                    <button onclick="preview.style.color=`magenta`;">Magenta</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="title">Change Background Color</div>
+                <div class="btns">
+                    <button onclick="preview.style.background=`lightblue`;">lightblue</button>
+                    <button onclick="preview.style.background=`lightseagreen`;">lightseagreen</button>
+                    <button onclick="preview.style.background=`lightcoral`;">lightcoral</button>
+                    <button onclick="preview.style.background=`lightgray`;">lightgray</button>
+                    <button onclick="preview.style.background=`lightblue`;">lightblue</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="title">Change Font Size</div>
+                <div class="btns">
+                    <button onclick="preview.style.fontSize=`12px`;">12px</button>
+                    <button onclick="preview.style.fontSize=`14px`;">14px</button>
+                    <button onclick="preview.style.fontSize=`16px`;">16px</button>
+                    <button onclick="preview.style.fontSize=`18px`;">18px</button>
+                    <button onclick="preview.style.fontSize=`20px`;">20px</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="title">Change border Style</div>
+                <div class="btns">
+                    <button onclick="preview.style.borderStyle=`None`;">None</button>
+                    <button onclick="preview.style.borderStyle=`solid`;">Solid</button>
+                    <button onclick="preview.style.borderStyle=`dotted`;">dotted</button>
+                    <button onclick="preview.style.borderStyle=`dashed`;">dashed</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="title">Change border Size</div>
+                <div class="btns">
+                    <button onclick="preview.style.borderWidth =`1px`;">1px</button>
+                    <button onclick="preview.style.borderWidth =`3px`;">3px</button>
+                    <button onclick="preview.style.borderWidth =`6px`;">6px</button>
+                    <button onclick="preview.style.borderWidth =`12px`;">12px</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="title">Change border Radius</div>
+                <div class="btns">
+                    <button onclick="preview.style.borderRadius=`15px`;">15px</button>
+                    <button onclick="preview.style.borderRadius=`20px`;">20px</button>
+                    <button onclick="preview.style.borderRadius=`30px`;">30px</button>
+                    <button onclick="preview.style.borderRadius=`50px`;">50px</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dicta ipsum vitae recusandae quam, possimus
+        perferendis expedita quae eius nisi! Quibusdam molestiae voluptate provident, aut mollitia error ipsa voluptatum
+        dicta, iure cumque nisi fugit! Deleniti velit laborum nisi autem in! In, eaque repellendus! Mollitia quaerat
+        praesentium eaque saepe, molestias facilis commodi quisquam voluptates est obcaecati corrupti rerum
+        voluptatibus. Repudiandae ipsum eaque explicabo totam, vel, eligendi aspernatur illo ut id architecto autem
+        saepe at. Commodi repellat rem amet doloremque aperiam illo non, ad maiores quisquam voluptatibus fuga
+        recusandae sed, maxime nam, nulla dignissimos quae voluptatum quam nihil incidunt fugit obcaecati vitae
+        officiis. Explicabo quia deserunt ipsam vitae. Earum eius sint aspernatur explicabo accusantium. Commodi,
+        molestias sapiente, quae itaque ducimus porro, eos adipisci nulla deleniti consectetur excepturi laudantium
+        amet. Illum beatae consequuntur aut eligendi voluptates? Ratione cum dignissimos architecto praesentium dolorem
+        tempora, temporibus veniam illum itaque maxime accusantium nemo non eum, blanditiis laboriosam voluptates nisi
+        quia in adipisci earum! Voluptates, consectetur debitis dolorum illum sed at soluta asperiores, nihil officia ex
+        vitae, perspiciatis obcaecati aperiam possimus. Quia adipisci fugit dolores ipsa. Repudiandae nostrum neque
+        tempora sed fugiat omnis in veritatis reprehenderit pariatur vero odit minima, facere id adipisci quod quaerat
+        eius vel consequatur maxime recusandae! Incidunt officia, aliquam omnis beatae perferendis soluta iure similique
+        voluptate, minima maiores adipisci assumenda cupiditate ipsum, nisi voluptates enim odit impedit sapiente
+        voluptas quam pariatur delectus autem? Dignissimos eum exercitationem, corrupti asperiores consectetur minus
+        doloremque odio? Repudiandae sint dolor nesciunt, quisquam architecto maiores esse tenetur delectus praesentium
+        est dicta. Dolorem voluptas pariatur doloremque suscipit aspernatur quam, quisquam numquam blanditiis porro amet
+        aliquid quaerat! Hic voluptate, assumenda ratione dolorem nam tenetur architecto illo temporibus aperiam
+        pariatur porro! Dolore reprehenderit culpa explicabo libero impedit ex illo qui asperiores, similique corrupti
+        quasi quisquam sint neque tempore provident voluptatum quis doloremque, quibusdam eaque, a saepe nisi. Illum est
+        modi officiis maxime odit libero numquam dolorum quam, voluptatem iusto unde possimus amet earum velit
+        architecto. Deserunt officiis facere fugit eveniet quae sint in eaque omnis laboriosam, neque sunt vel ut
+        debitis voluptatum adipisci recusandae voluptas dolores libero soluta eum eos. Natus, blanditiis alias obcaecati
+        debitis neque dolore nam rerum quas ratione incidunt ab atque labore deleniti voluptatem tempore possimus
+        eveniet! A dignissimos nobis sapiente odio magnam praesentium corrupti voluptas labore hic repellendus
+        consectetur delectus deserunt mollitia laboriosam, neque, ratione distinctio quo maiores cupiditate dolorum,
+        illo qui accusantium. Perspiciatis quia tempore voluptatibus quisquam ducimus aliquid porro architecto
+        voluptatum rerum. Architecto odio molestias quae impedit deleniti sapiente hic ut laborum a incidunt accusamus
+        id, rerum at doloremque, odit maxime distinctio eveniet quo sit ullam consectetur ipsam omnis! Deserunt, quo
+        quisquam vero non quos asperiores, repellendus culpa fugit modi architecto, minus repudiandae! Et tempore a in
+        officia sit dignissimos molestiae architecto! Error suscipit sit numquam facilis! Expedita blanditiis, tempora
+        neque distinctio provident omnis tenetur, alias doloribus pariatur in ut? Et quisquam voluptatibus fugit
+        accusantium earum aut, omnis vel ratione molestiae nam reiciendis. Excepturi corporis culpa cupiditate
+        necessitatibus placeat amet reiciendis odio in, cumque maxime esse iste nulla mollitia, voluptates aperiam magni
+        veritatis quia eveniet earum officiis saepe? Temporibus alias, labore ad magnam deserunt fugit incidunt? Nostrum
+        exercitationem fuga ut assumenda, amet esse animi necessitatibus iure sapiente non neque reprehenderit sequi
+        magnam ab aliquid quidem rem porro voluptas asperiores accusantium ipsam, corporis maiores possimus doloribus.
+        Placeat reprehenderit iure assumenda animi cupiditate laudantium laborum odit totam corrupti aspernatur
+        accusamus nihil, commodi a soluta vitae. Enim nemo ab sunt cum unde mollitia quae suscipit tenetur eligendi quis
+        architecto, doloribus dignissimos molestiae nihil officiis similique nam non, modi ad optio necessitatibus
+        reprehenderit rem. Reiciendis aliquid eveniet esse voluptatum? Eos, eligendi consequuntur. Dolores cumque totam
+        accusantium sit ad, quisquam ipsum, illum, voluptas obcaecati reiciendis debitis ratione autem? Repudiandae
+        necessitatibus natus sed delectus. Totam, debitis dignissimos necessitatibus sit, ut mollitia facere, nihil quam
+        quisquam libero dolores quos! Enim inventore alias itaque dolores! Tenetur aspernatur, optio voluptate molestiae
+        ipsa assumenda necessitatibus dolore, quam officia consectetur, harum est odio temporibus unde ea minus
+        perspiciatis totam modi cupiditate excepturi asperiores quo. Error, quasi saepe architecto officiis tenetur
+        mollitia exercitationem, labore facilis culpa accusamus eos commodi. Reiciendis expedita aut eius magni sequi
+        nobis. Quaerat magnam eaque exercitationem possimus, in, minima minus doloremque voluptatibus nihil omnis vero
+        est, ex assumenda fugiat consequatur suscipit. Reiciendis nulla ducimus neque quos odit nostrum dicta, est
+        dignissimos expedita eligendi, maxime cumque adipisci? Beatae, laudantium mollitia aliquid facere aspernatur
+        fugiat accusamus natus atque hic. Rerum saepe nemo delectus assumenda suscipit obcaecati, adipisci nulla!
+        Maiores delectus, sunt ducimus molestias aliquam provident culpa quia maxime illo pariatur incidunt reiciendis
+        quas! Optio quod ducimus provident quidem vel expedita laborum aliquam deleniti officiis? Vitae, exercitationem.
+        Rerum veniam error quisquam dolore sit a ullam quis exercitationem, sed dolorem possimus qui ut aspernatur
+        quaerat consequuntur labore ipsum, quos eius? Expedita fugit, suscipit repellendus sint eligendi rem! Odit
+        aliquam asperiores quas possimus praesentium, beatae, architecto dignissimos rerum ex assumenda repellat
+        pariatur accusantium, quod vel nulla debitis quam optio iste voluptate voluptatibus iusto eaque consectetur.
+        Omnis accusantium mollitia ipsa, pariatur non voluptatum ratione a nihil, voluptate earum excepturi. Totam
+        soluta inventore sapiente in error alias reiciendis non hic, enim molestiae illum id libero. Enim asperiores ex
+        natus tempora rem facilis excepturi repudiandae fuga pariatur error totam itaque quidem maiores similique
+        commodi blanditiis dolorem nulla provident amet magni eveniet, vero laudantium. Delectus, corporis quisquam.
+        Aperiam perspiciatis fugiat minima repellendus harum quo laudantium alias molestias iure earum quisquam, modi
+        nihil temporibus blanditiis non ipsum fugit consequatur ab deserunt sunt dolor. Qui corporis id itaque aliquam
+        eos dolore iusto exercitationem vitae, ut odit eligendi eaque debitis dolores fugit non reprehenderit cum quis
+        ea ad sequi ratione assumenda quaerat, doloribus reiciendis? Ab, debitis sequi, modi necessitatibus sapiente
+        cupiditate dolore incidunt consequatur quia rem, non vero quaerat temporibus eaque voluptates! Molestiae quo,
+        quod ducimus fugiat tempora vitae. Eaque maiores atque officia adipisci expedita maxime veritatis praesentium
+        deserunt error! Dolore, numquam doloremque laborum aliquam provident ullam, aperiam corporis magni odit error,
+        quis optio! Cum ipsa alias ut delectus nisi, nam quos vel velit dolorem consequuntur.</p>
+</body>
+
+</html>
